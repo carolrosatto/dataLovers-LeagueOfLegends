@@ -1,8 +1,18 @@
-// esta é uma função de exemplo
-// veja como agregamos a função ao objeto global window
 
-const example = () => {
-  return "example";
+const filterData = (database, condition) => {
+  return database.filter(item => item.includes(condition));
 };
 
-window.example = example;
+const orderNames = (order, database) => {
+  if (order === "A-Z") {
+    return database.sort((a, b) => a.championName > b.championName ? 1 : -1);
+  } else {
+    return database.sort((a, b) => a.championName > b.championName ? -1 : 1)
+  }
+}
+
+window.app = {
+  filterData,
+  orderNames
+}
+
