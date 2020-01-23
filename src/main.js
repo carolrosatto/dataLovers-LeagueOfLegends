@@ -2,6 +2,7 @@
 const database = LOL.data;
 const printTag = document.getElementById('cards-div');
 const champCardInfo = [];
+const orderInput = document.getElementsByClassName("order");
 
 Object.keys(database).forEach((championName) => {
     let img = database[championName].img;
@@ -19,7 +20,9 @@ const addCard = (arr) => {
         printTag.innerHTML = 
         card += `<div class ="cards">
         <div class="img-container"><img class="char-img" src="${char.img}"/></div>
-        <div class="title-container"><h4>${char.championName}, ${char.title}</h3></div>
+        <div class="title-container">
+        <h4>${char.championName}</h4>
+        <h5>${char.title}</h5></div>
         <section class="char-properties">
             <p>Função: ${char.position}</p>
             <p>Ataque: ${char.attack}</p>
@@ -31,9 +34,13 @@ const addCard = (arr) => {
 
 onload = () => addCard(champCardInfo);
 
+//Botão que ordena por A-Z Z-A
+orderInput.addEventListener("change", () => {
+    addCard(app.orderNames(orderInput.value, data))
+})
+console.log(orderInput);
 
 //Botão que filtra por função [Assassin, Tank, Support, Mage, Fighter, Marksman]
 
-//Botão que ordena por A-Z Z-A
 
 //Botão que ordena por maior ataque

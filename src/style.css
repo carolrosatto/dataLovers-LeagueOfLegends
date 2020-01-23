@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Roboto Slab', serif'
+    font-family: 'Roboto Slab', 'serif';
 }
 body{
     background: url("./img/DCug3kvUQAAPAhY.jpg") no-repeat fixed ;
@@ -10,17 +10,23 @@ body{
 header{
     display: flex;
     background-color: transparent;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     width: 100vw;
+    padding-top: 1%;
+    margin-bottom: 10px;
 }
 .header-logo{
-    width: 25vw;
+    width: 20vw;
 }
 #cards-div{
-    padding: 2%;
+    max-height: 70vh;
+    margin: 1%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
+    overflow: auto;
+    
 }
 .cards{
     border-radius: 10px;
@@ -45,10 +51,21 @@ header{
 .title-container{
     color: #9e8b3d;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column  ;
 }
 .char-properties{
     color: #d1cda8;
     font-size: 90%;
     font-family: 'Lato', sans-serif;
 }
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background:  rgba(19, 18, 21, 0.8); 
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,17 +8,31 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-    <header>
-      <img class="header-logo" src="./img/League_of_Legends_logo.png" alt="League of Legends Logo"/>
-    </header>
-    <main>
-      <section id="cards-div">
-      </section>
-    </main>
-    <footer>
 
-    </footer>
+<body>
+  <header>
+    <img class="header-logo" src="./img/League_of_Legends_logo.png" alt="League of Legends Logo" />
+    <div class="filter-options">
+      <select name="position">
+        <option value="none"></option>
+        <option value="Fighter">Lutador</option>
+        <option value="Support">Suporte</option>
+        <option value="Tank">Tanque</option>
+        <option value="Assassin">Assassino</option>
+        <option value="Mage">Mago</option>
+        <option value="Marksman">Atirador</option>
+      </select>
+      <select name="order">
+        <option value="none"></option>
+        <option value="A-Z">A-Z</option>
+        <option value="Z-A">Z-A</option>
+      </select>
+    </div>
+  </header>
+  <main>
+    <section id="cards-div">
+    </section>
+  </main>
   <script src="data/lol/lol.js"></script>
   <script src="data.js"></script>
   <script src="main.js"></script>
