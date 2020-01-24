@@ -54,9 +54,11 @@ Página de curiosidades:
 Esses são os layouts finais das telas iniciais.
 
 Versão web:
+
 ![Layout 1](src/img/layout1.png)
 
 Versão mobile:
+
 ![Layout 2](src/img/layout2.png)
 
 ## 6. Ferramentas utilizadas
