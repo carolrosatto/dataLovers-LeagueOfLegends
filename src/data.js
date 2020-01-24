@@ -3,7 +3,7 @@ const filterData = (database, condition) => {
   return database.filter(item => item.includes(condition));
 };
 
-const orderNames = (order, database) => {
+const orderNames = (database, order) => {
   if (order === "A-Z") {
     return database.sort((a, b) => a.championName > b.championName ? 1 : -1);
   } else {
@@ -11,7 +11,7 @@ const orderNames = (order, database) => {
   }
 }
 
-window.app = {
+app = {
   filterData,
   orderNames
 }

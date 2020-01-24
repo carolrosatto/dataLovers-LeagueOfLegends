@@ -13,8 +13,8 @@
   <header>
     <img class="header-logo" src="./img/League_of_Legends_logo.png" alt="League of Legends Logo" />
     <div class="filter-options">
-      <select name="position">
-        <option value="none"></option>
+      <select class="position" name="select" id="position">
+        <option value="none">Função:</option>
         <option value="Fighter">Lutador</option>
         <option value="Support">Suporte</option>
         <option value="Tank">Tanque</option>
@@ -22,11 +22,14 @@
         <option value="Mage">Mago</option>
         <option value="Marksman">Atirador</option>
       </select>
-      <select name="order">
-        <option value="none"></option>
+      <select class="order" name="select" id="order">
+        <option value="none">Ordernar:</option>
         <option value="A-Z">A-Z</option>
         <option value="Z-A">Z-A</option>
       </select>
+      <div class="button-media">
+        <button class='btn-media'>Médias</button>
+      </div>
     </div>
   </header>
   <main>
