@@ -1,13 +1,12 @@
-
-const filterData = (database, condition) => {
-  return database.filter(item => item.includes(condition));
+const filterData = (database, condition, key) => {
+  return database.filter(item => item[key].includes(condition));
 };
 
-const orderNames = (database, order) => {
-  if (order === "A-Z") {
-    return database.sort((a, b) => a.championName > b.championName ? 1 : -1);
+const orderNames = (database, sortBy, order) => {
+  if (order === "A-Z") {  
+    return database.sort((a, b) => a[sortBy] > b[sortBy] ? 1 : -1);
   } else {
-    return database.sort((a, b) => a.championName > b.championName ? -1 : 1)
+    return database.sort((a, b) => a[sortBy] > b[sortBy] ? -1 : 1)
   }
 }
 

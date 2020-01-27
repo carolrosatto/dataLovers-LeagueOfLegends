@@ -1,88 +1,102 @@
 *{
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 body{
-    background: url("./img/DCug3kvUQAAPAhY.jpg") no-repeat fixed ;
-    background-size: cover;
+  background: url("./img/DCug3kvUQAAPAhY.jpg") no-repeat fixed ;
+  background-size: cover;
 }
 header{
-    display: flex;
-    background-color: transparent;
-    align-items: center;
-    flex-direction: column;
-    width: 100vw;
-    padding-top: 1%;
-    margin-bottom: 20px;
+  display: flex;
+  background-color: transparent;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  padding-top: 1%;
+  margin-bottom: 20px;
 }
 .header-logo{
-    width: 20vw;
-    margin-bottom: 15px;
+  width: 20vw;
+  margin-bottom: 15px;
 }
 
 #cards-div{
-    max-height: 70vh;
-    margin-left: 2%;
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    overflow: auto;
+  max-height: 70vh;
+  margin-left: 2%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  overflow: auto;
 }
 .filter-options{
-    width: 40vw;
-    display: flex;
-    justify-content: space-around;
+  width: 40vw;
+  display: flex;
+  justify-content: space-around;
 }
 .cards{
-    border-radius: 10px;
-    background: rgba(19, 18, 21, 0.8);
-    width: 13vw;
-    height: 37vh;
-    margin: 5px;
-    padding: 1%;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
+  border-radius: 10px;
+  background: rgba(19, 18, 21, 0.8);
+  width: 13vw;
+  height: 37vh;
+  margin: 5px;
+  padding: 1%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
 }
 .char-img{
-    width: 5vw;
-    border-radius: 50px;
-    border: 3px ridge #bb9a2c;
+  width: 5vw;
+  border-radius: 50px;
+  border: 3px ridge #bb9a2c;
 }
 .img-container{
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 .title-container{
-    color: #9e8b3d;
-    display: flex;
-    align-items: center;
-    flex-direction: column  ;
-    font-family: 'Roboto Slab', 'serif';
-    font-size: 120%;
+  color: #9e8b3d;
+  display: flex;
+  align-items: center;
+  flex-direction: column  ;
+  font-family: 'Roboto Slab', 'serif';
+  font-size: 120%;
 }
 .char-properties{
-    color: #d1cda8;
-    font-size: 90%;
-    font-family: 'Lato', 'sans-serif';
-    margin-top: 10px;
+  color: #d1cda8;
+  font-size: 90%;
+  font-family: 'Lato', 'sans-serif';
+  margin-top: 10px;
 }
 select{
-    border: 3px outset #bb9a2c;
-    background-color: #9e8b3d;
-    border-radius: 5px;
-    font-size: 90%;
-    font-weight: bold;
+  border: 3px outset #bb9a2c;
+  background-color: #9e8b3d;
+  border-radius: 5px;
+  font-size: 90%;
+  font-weight: bold;
 }
-.btn-media{
-    background-color: #9e8b3d;
-    border: 3px outset #bb9a2c;
-    border-radius: 5px;
-    width: 6vw;
-    height: 5vh;
-    font-size: 90%;
-    font-weight: bold;
+.card-best{
+  border-radius: 10px;
+  background: rgba(19, 18, 21, 0.8);
+  width: 11vw;
+  height: 33vh;
+  margin: 5px;
+  padding: 25px;
 }
+.list-best{
+  color: #d1cda8;
+  font-size: 90%;
+  font-family: 'Lato', 'sans-serif';
+}
+.curios-title{
+  color: #9e8b3d;
+  font-family: 'Roboto Slab', 'serif';
+  font-size: 130%;
+  margin-bottom: 15px;
+}
+li{
+  margin: 10px;
+}
+
 ::-webkit-scrollbar {
     width: 10px;
   }
@@ -95,24 +109,24 @@ select{
 
 @media only screen and (max-width: 576px) {
 body{
-    background: url("./img/mobile-bg.jpg") no-repeat center fixed ;
-    background-size: cover;
-    }
+  background: url("./img/mobile-bg.jpg") no-repeat center fixed ;
+  background-size: cover;
+}
 .header-logo{
-    width: 60vw;
-    margin-bottom: 10px;
-    }
+  width: 60vw;
+  margin-bottom: 10px;
+}
 header{
-      width: 100vw;
-      padding-top: 1%;
-      margin-bottom: 20px;
-  }
-  #cards-div{
-    max-height: 79vh;
-    max-width: 100vw;
-    margin-left: 0;
-    display: flex;
-    justify-content: center;
+  width: 100vw;
+  padding-top: 1%;
+  margin-bottom: 20px;
+}
+#cards-div{
+  max-height: 79vh;
+  max-width: 100vw;
+  margin-left: 0;
+  display: flex;
+  justify-content: center;
 }
 .cards{
   width: 60vw;
@@ -139,8 +153,19 @@ select{
   height: 4vh;
 }
 .btn-media{
-  width: 20vw;
+  width: 30vw;
   height: 4vh;
   font-size: 100%;
 }
+.card-best{
+  width: 53vw;
+  height: 29vh;
+  margin: 5px;
+}
+.list-best{
+  font-size: 110%;
+}
+.curios-title{
+  font-size: 140%;
+  }
 }
