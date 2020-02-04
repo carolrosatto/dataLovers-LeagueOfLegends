@@ -6,12 +6,12 @@ const orderNames = (database, sortBy, order) => {
   if (order === "A-Z") {  
     return database.sort((a, b) => a[sortBy] > b[sortBy] ? 1 : -1);
   } else {
-    return database.sort((a, b) => a[sortBy] > b[sortBy] ? -1 : 1)
+    return database.sort((a, b) => a[sortBy] > b[sortBy] ? -1 : 1);
   }
-}
+};
 
-app = {
+window.app = {
   filterData,
   orderNames
-}
+};
 

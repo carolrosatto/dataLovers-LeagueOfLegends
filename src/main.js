@@ -2,7 +2,7 @@ const database = LOL.data;
 const printTag = document.getElementById("cards-div");
 const champCardInfo = [];
 const orderInput = document.getElementById("order");
-const filterChampion = document.getElementById("position")
+const filterChampion = document.getElementById("position");
 
 Object.keys(database).forEach((championName) => {
   let img = database[championName].img;
@@ -12,13 +12,13 @@ Object.keys(database).forEach((championName) => {
   let title = database[championName].title;
   let armor = database[championName].stats.armor;
   let hp = database[championName].stats.hp;
-  champCardInfo.push({ championName, img, attack, defense, position, title, armor, hp })
+  champCardInfo.push({ championName, img, attack, defense, position, title, armor, hp });
   return champCardInfo;
-})
-
+});
+// console.log(champCardInfo);
 const addCard = (arr) => {
   let card = "";
-  card += curiosity()
+  card += curiosity();
   arr.forEach((char) => {
     card += `<div class ="cards">
       <div class="img-container"><img class="char-img" src="${char.img}"/></div>
@@ -26,14 +26,14 @@ const addCard = (arr) => {
       <h4>${char.championName}</h4>
       <h5>${char.title}</h5></div>
       <section class="char-properties">
-          <p>Função: ${char.position}</p>
-          <p>HP: ${char.hp}</p>
-          <p>Armadura: ${char.armor}</p>
-          <p>Ataque: ${char.attack}</p>
-          <p>Defesa: ${char.defense}</p>
+      <p>Função: ${char.position}</p>
+      <p>HP: ${char.hp}</p>
+      <p>Armadura: ${char.armor}</p>
+      <p>Ataque: ${char.attack}</p>
+      <p>Defesa: ${char.defense}</p>
       </section>
-      </div>`
-  })
+      </div>`;
+  });
   printTag.innerHTML = card;
 };
 const curiosity = () => {
@@ -45,31 +45,31 @@ const curiosity = () => {
     <li>Maior HP: ${bestHP}</li>
     <li>Maior armadura: ${bestArmor}</li>
     </ul>
-    </div>`
-}
+    </div>`;
+};
 
 onload = () => addCard(champCardInfo);
 
 orderInput.addEventListener("change", (e) => {
   let orderValue = e.target.value;
-  let ordered = app.orderNames(champCardInfo, "championName", orderValue);
+  let ordered = window.app.orderNames(champCardInfo, "championName", orderValue);
   addCard(ordered);
   return ordered;
-})
+});
 
 filterChampion.addEventListener("change", (e) => {
   let positionValue = e.target.value;
-  let filterPosition = app.filterData(champCardInfo, positionValue, "position")
+  let filterPosition = window.app.filterData(champCardInfo, positionValue, "position");
   addCard(filterPosition);
 });
 
 const name = champCardInfo.map(champ => champ.championName);
 
 const allAttack = champCardInfo.map((char) => char.attack);
-const bestAttack = name[(allAttack.indexOf(Math.max.apply(Math, allAttack)))]
+const bestAttack = name[(allAttack.indexOf(Math.max.apply(Math, allAttack)))];
 const allHP = champCardInfo.map((char) => char.hp);
-const bestHP = name[(allHP.indexOf(Math.max.apply(Math, allHP)))]
+const bestHP = name[(allHP.indexOf(Math.max.apply(Math, allHP)))];
 const allArmor = champCardInfo.map((char) => char.armor);
-const bestArmor = name[(allArmor.indexOf(Math.max.apply(Math, allArmor)))]
+const bestArmor = name[(allArmor.indexOf(Math.max.apply(Math, allArmor)))];
 const allDefense = champCardInfo.map((char) => char.defense);
-const bestDefense = name[(allDefense.indexOf(Math.max.apply(Math, allDefense)))]
+const bestDefense = name[(allDefense.indexOf(Math.max.apply(Math, allDefense)))];
